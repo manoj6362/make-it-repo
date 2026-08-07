@@ -4,22 +4,39 @@ const CLIENTS = ["Sitemark", "Inspire", "SnapShot", "Vertigo", "Umbrella", "Netw
 const STRIP = ["Featured works", "Selected 2024 \u2014 2026", "Case studies"];
 const CTA_WORDS = ["Let\u2019s work together"];
 
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text) node.textContent = text;
+  return node;
+}
+
+function fill(selector, build) {
+  const track = document.querySelector(selector);
+  if (!track) return;
+  track.replaceChildren(...build.flat());
+}
+
 /* Fills the repeating tracks that are authored empty in the markup. */
 export function buildTracks() {
-  const clients = document.querySelector(".clients__track");
-  if (clients) {
-    clients.innerHTML = CLIENTS.map((c) => `<div class="client">${c}<sup>&#174;</sup></div>`).join("");
-  }
+  fill(
+    ".clients__track",
+    CLIENTS.map((name) => {
+      const card = el("div", "client", name);
+      card.append(el("sup", null, "\u00ae"));
+      return card;
+    })
+  );
 
-  const strip = document.querySelector(".strip__track");
-  if (strip) {
-    strip.innerHTML = STRIP.map((s) => `<span>${s}</span><b></b>`).join("");
-  }
+  fill(
+    ".strip__track",
+    STRIP.map((s) => [el("span", null, s), el("b")])
+  );
 
-  const cta = document.querySelector(".cta__track");
-  if (cta) {
-    cta.innerHTML = CTA_WORDS.map((s) => `<span>${s}</span>`).join("");
-  }
+  fill(
+    ".cta__track",
+    CTA_WORDS.map((s) => el("span", null, s))
+  );
 }
 
 function gapOf(track) {

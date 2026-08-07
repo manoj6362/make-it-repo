@@ -72,7 +72,10 @@ export function initHeroCanvas() {
     if (!reduced) requestAnimationFrame(draw);
   };
 
-  window.addEventListener("resize", resize);
+  window.addEventListener("resize", () => {
+    resize();
+    if (reduced) draw();
+  });
   window.addEventListener("pointermove", (e) => {
     const r = canvas.getBoundingClientRect();
     pointer.x = e.clientX - r.left;
