@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ether&#174; Studio — Design That Thinks Before It Speaks</title>
+<meta name="description" content="Ether is a full stack design studio building brands, websites and digital experiences that stand out and perform." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+
+<!-- ░░ PRELOADER ░░ -->
+<div class="loader" id="loader">
+  <div class="loader__grain"></div>
+  <div class="loader__mark">
+    <svg viewBox="0 0 100 100" class="loader__glyph" aria-hidden="true">
+      <g fill="currentColor">
+        <circle cx="50" cy="22" r="15" /><circle cx="50" cy="78" r="15" />
+        <circle cx="22" cy="50" r="15" /><circle cx="78" cy="50" r="15" />
+      </g>
+    </svg>
+  </div>
+  <div class="loader__word"><span data-loader-word>ETHER</span><sup>&#174;</sup></div>
+  <div class="loader__status">Crafting your experience</div>
+  <div class="loader__bar"><i id="loaderBar"></i></div>
+  <div class="loader__count"><span id="loaderCount">0</span><em>%</em></div>
+  <div class="loader__curtain"></div>
+</div>
+
+<!-- ░░ CURSOR ░░ -->
+<div class="cursor" id="cursor"><span class="cursor__label"></span></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ░░ PROGRESS ░░ -->
+<div class="progress"><i id="progressBar"></i></div>
+
+<!-- ░░ NAV ░░ -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#top" data-cursor="Top">
+    <svg viewBox="0 0 100 100" aria-hidden="true"><g fill="currentColor"><circle cx="50" cy="22" r="15"/><circle cx="50" cy="78" r="15"/><circle cx="22" cy="50" r="15"/><circle cx="78" cy="50" r="15"/></g></svg>
+    <span>Ether<sup>&#174;</sup></span>
+  </a>
+  <nav class="nav__links">
+    <a href="#services" data-link>Services</a>
+    <a href="#work" data-link>Work</a>
+    <a href="#process" data-link>Process</a>
+    <a href="#pricing" data-link>Pricing</a>
+  </nav>
+  <div class="nav__right">
+    <a class="btn btn--sm" href="#contact" data-magnetic>
+      <span class="btn__labels"><i>Start a project</i><i>Start a project</i></span>
+      <span class="btn__icon">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><span>Menu</span><i></i><i></i></button>
+  </div>
+</header>
+
+<!-- ░░ FULLSCREEN MENU ░░ -->
+<div class="overlay" id="overlay">
+  <div class="overlay__panels"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="overlay__inner">
+    <div class="overlay__list">
+      <a href="#top" data-overlay-link><em>01</em><span>Home</span></a>
+      <a href="#services" data-overlay-link><em>02</em><span>Services</span></a>
+      <a href="#work" data-overlay-link><em>03</em><span>Work</span></a>
+      <a href="#process" data-overlay-link><em>04</em><span>Process</span></a>
+      <a href="#pricing" data-overlay-link><em>05</em><span>Pricing</span></a>
+      <a href="#contact" data-overlay-link><em>06</em><span>Contact</span></a>
+    </div>
+    <div class="overlay__meta">
+      <div><span class="eyebrow">Studio</span><p>Bengaluru &#183; Remote worldwide</p></div>
+      <div><span class="eyebrow">Enquiries</span><p>hello@ether.studio</p></div>
+      <div><span class="eyebrow">Socials</span><p>X &#183; LinkedIn &#183; Dribbble &#183; Behance</p></div>
+    </div>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="hero">
+    <div class="hero__aura"></div>
+    <canvas id="heroCanvas" class="hero__canvas"></canvas>
+    <div class="hero__inner">
+      <div class="badge">
+        <i class="badge__pulse"></i><span>Open for projects &#8212; 2026</span>
+      </div>
+      <h1 class="display hero__title">
+        <span class="line" data-split>Design that thinks</span>
+        <span class="line accent" data-split>before it speaks</span>
+      </h1>
+      <div class="hero__foot">
+        <p class="lede">We shape brands, websites and digital experiences where every pixel has a reason to exist.</p>
+        <div class="hero__cta">
+          <a class="btn btn--dark" href="#work" data-magnetic data-cursor="View">
+            <span class="btn__labels"><i>Explore the work</i><i>Explore the work</i></span>
+            <span class="btn__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+          <a class="btn btn--ghost" href="#contact" data-magnetic>
+            <span class="btn__labels"><i>Book a call</i><i>Book a call</i></span>
+            <span class="btn__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cue"><span>Scroll</span><i></i></div>
+  </section>
+
+  <!-- ░░ SHOWREEL MARQUEE ░░ -->
+  <section class="reel" aria-label="Selected imagery">
+    <div class="reel__row" data-marquee data-speed="0.6">
+      <div class="reel__track">
+        <figure class="reel__item" data-tilt><img src="/img/hero-1.jpg" alt="Machined aluminium object study" /></figure>
+        <figure class="reel__item" data-tilt><img src="/img/work-4.jpg" alt="Chrome ribbon study" /></figure>
+        <figure class="reel__item" data-tilt><img src="/img/hero-2.jpg" alt="Liquid chrome sphere" /></figure>
+        <figure class="reel__item" data-tilt><img src="/img/work-3.jpg" alt="Frosted glass arches" /></figure>
+      </div>
+    </div>
+    <div class="reel__row reel__row--rev" data-marquee data-speed="-0.45">
+      <div class="reel__track">
+        <figure class="reel__item reel__item--tall" data-tilt><img src="/img/hero-3.jpg" alt="Black glass spiral" /></figure>
+        <figure class="reel__item reel__item--tall" data-tilt><img src="/img/work-1.jpg" alt="Ceramic torus" /></figure>
+        <figure class="reel__item reel__item--tall" data-tilt><img src="/img/work-2.jpg" alt="Titanium cube" /></figure>
+        <figure class="reel__item reel__item--tall" data-tilt><img src="/img/hero-1.jpg" alt="Aluminium macro" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ CLIENTS ░░ -->
+  <section class="clients">
+    <span class="eyebrow eyebrow--center">Trusted by teams who care about craft</span>
+    <div class="clients__row" data-marquee data-speed="0.35">
+      <div class="clients__track"></div>
+    </div>
+  </section>
+
+  <!-- ░░ METRICS ░░ -->
+  <section class="metrics" id="metrics">
+    <div class="section-head">
+      <span class="eyebrow">Metrics</span>
+      <h2 class="display display--md" data-split>Numbers that speak for themselves</h2>
+    </div>
+    <div class="metrics__grid">
+      <article class="metric" data-reveal><h3><span data-count="120" data-suffix="+">0</span></h3><p>Products shipped across brand, web and product design.</p></article>
+      <article class="metric" data-reveal><h3><span data-count="98" data-suffix="%">0</span></h3><p>Client retention across long term studio partnerships.</p></article>
+      <article class="metric" data-reveal><h3><span data-count="14" data-suffix="&#215;">0</span></h3><p>Average lift in qualified inbound after relaunch.</p></article>
+      <article class="metric" data-reveal><h3><span data-count="9" data-suffix=" yrs">0</span></h3><p>Of compounding craft, systems and design leadership.</p></article>
+    </div>
+  </section>
+
+  <!-- ░░ SERVICES ░░ -->
+  <section class="services" id="services">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="eyebrow">What we do</span>
+        <h2 class="display display--md" data-split>Built end to end. Built to last.</h2>
+      </div>
+      <a class="btn btn--dark" href="#contact" data-magnetic>
+        <span class="btn__labels"><i>Start a project</i><i>Start a project</i></span>
+        <span class="btn__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+    <div class="services__grid">
+      <article class="service" data-reveal data-tilt>
+        <div class="service__media"><img src="/img/svc-1.jpg" alt="Web design" /></div>
+        <div class="service__body"><em>01</em><h3>Web Design</h3><p>Your website is your hardest working team member. We design interfaces that guide every visitor toward action.</p></div>
+        <span class="service__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+      <article class="service" data-reveal data-tilt>
+        <div class="service__media"><img src="/img/svc-2.jpg" alt="Web development" /></div>
+        <div class="service__body"><em>02</em><h3>Development</h3><p>Pixel-perfect front-ends on platforms built for performance, flexibility and effortless management.</p></div>
+        <span class="service__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+      <article class="service" data-reveal data-tilt>
+        <div class="service__media"><img src="/img/svc-3.jpg" alt="SEO and growth" /></div>
+        <div class="service__body"><em>03</em><h3>SEO &amp; Growth</h3><p>Beautiful design means nothing if nobody finds it. Search visibility is engineered into every build.</p></div>
+        <span class="service__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+      <article class="service" data-reveal data-tilt>
+        <div class="service__media"><img src="/img/svc-4.jpg" alt="Support and partnership" /></div>
+        <div class="service__body"><em>04</em><h3>Partnership</h3><p>We stay on as a long-term partner, evolving the system with your business so you never start over.</p></div>
+        <span class="service__arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ░░ 3D OBJECT ░░ -->
+  <section class="object" id="object">
+    <div class="object__copy">
+      <span class="eyebrow">Dimension</span>
+      <h2 class="display display--md" data-split>Drag it. Spin it. Feel the craft.</h2>
+      <p class="lede">A live WebGL object rendered in real time. Every surface, light and reflection is computed in the browser &#8212; the same obsession we bring to your build.</p>
+      <ul class="object__facts">
+        <li><span>60 fps</span><em>Real-time render loop</em></li>
+        <li><span>WebGL</span><em>Hardware accelerated</em></li>
+        <li><span>Drag</span><em>Inertia based rotation</em></li>
+      </ul>
+    </div>
+    <div class="object__stage">
+      <canvas id="objectCanvas" data-cursor="Drag"></canvas>
+      <span class="object__hint">Click and drag to rotate</span>
+    </div>
+  </section>
+
+  <!-- ░░ WORK ░░ -->
+  <section class="work" id="work">
+    <div class="strip" data-marquee data-speed="0.5"><div class="strip__track"></div></div>
+    <div class="work__list">
+      <article class="case" data-case data-reveal>
+        <div class="case__media" data-parallax-media><img src="/img/work-1.jpg" alt="Umbrella case study" /></div>
+        <div class="case__meta"><em>2026 &#183; Brand &amp; Web</em><h3>Umbrella</h3><p>A full identity and site rebuild for a fintech platform. Conversion up 42% in the first quarter.</p>
+          <span class="link" data-cursor="Open">View case<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </article>
+      <article class="case case--rev" data-case data-reveal>
+        <div class="case__media" data-parallax-media><img src="/img/work-2.jpg" alt="Vertigo case study" /></div>
+        <div class="case__meta"><em>2026 &#183; Product Design</em><h3>Vertigo</h3><p>Design system and marketing surface for a hardware studio launching in nine markets.</p>
+          <span class="link" data-cursor="Open">View case<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </article>
+      <article class="case" data-case data-reveal>
+        <div class="case__media" data-parallax-media><img src="/img/work-3.jpg" alt="Snapshot case study" /></div>
+        <div class="case__meta"><em>2025 &#183; Brand Identity</em><h3>Snapshot</h3><p>A photography marketplace repositioned around craft, with an editorial-grade visual language.</p>
+          <span class="link" data-cursor="Open">View case<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </article>
+      <article class="case case--rev" data-case data-reveal>
+        <div class="case__media" data-parallax-media><img src="/img/work-4.jpg" alt="Inspire case study" /></div>
+        <div class="case__meta"><em>2025 &#183; Web Experience</em><h3>Inspire</h3><p>An immersive WebGL launch experience for a luxury fragrance house. 3.2M sessions in month one.</p>
+          <span class="link" data-cursor="Open">View case<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ░░ PROCESS ░░ -->
+  <section class="process" id="process">
+    <div class="process__sticky">
+      <span class="eyebrow">Process</span>
+      <h2 class="display display--md" data-split>Four moves, zero guesswork</h2>
+      <p class="lede">A rhythm refined over nine years and a hundred launches. Clear, calm and relentlessly documented.</p>
+      <div class="process__progress"><i data-process-bar></i></div>
+    </div>
+    <div class="process__steps">
+      <article class="step" data-step data-reveal><em>01</em><h3>Discover</h3><p>Workshops, audits and interviews until the problem is sharp enough to design against.</p></article>
+      <article class="step" data-step data-reveal><em>02</em><h3>Define</h3><p>Positioning, narrative and information architecture. The blueprint everything else hangs from.</p></article>
+      <article class="step" data-step data-reveal><em>03</em><h3>Design</h3><p>Art direction, motion language and a component system built for scale, not screenshots.</p></article>
+      <article class="step" data-step data-reveal><em>04</em><h3>Deploy</h3><p>Engineering, QA, analytics and a launch plan. Then we iterate on evidence, not opinion.</p></article>
+    </div>
+  </section>
+
+  <!-- ░░ TESTIMONIALS ░░ -->
+  <section class="voices">
+    <div class="section-head"><span class="eyebrow">Testimonials</span><h2 class="display display--md" data-split>Hear what our clients say</h2></div>
+    <div class="voices__row" data-marquee data-speed="0.3" data-pausable>
+      <div class="voices__track">
+        <article class="voice"><div class="voice__quote">&#8220;</div><p>From the first call they asked the right questions and came back with an identity that felt like us, but sharper. Professional, thoughtful, genuinely invested.</p><footer><img src="/img/face-1.jpg" alt="Priya Menon" /><span><b>Priya Menon</b><em>Founder, Umbrella</em></span></footer></article>
+        <article class="voice"><div class="voice__quote">&#8220;</div><p>I came in with a vague brief and a tight deadline. Ether turned it into a complete brand system the whole team fell in love with.</p><footer><img src="/img/face-2.jpg" alt="James Rourke" /><span><b>James Rourke</b><em>CEO, Network</em></span></footer></article>
+        <article class="voice"><div class="voice__quote">&#8220;</div><p>Within two months of launching the new identity the results spoke for themselves. Sharp strategy, beautiful execution, real impact.</p><footer><img src="/img/face-3.jpg" alt="Anika Sharma" /><span><b>Anika Sharma</b><em>Founder, Snapshot</em></span></footer></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ PRICING ░░ -->
+  <section class="pricing" id="pricing">
+    <div class="section-head"><span class="eyebrow">Pricing</span><h2 class="display display--md" data-split>Simple and honest pricing</h2></div>
+    <div class="pricing__grid">
+      <article class="plan" data-reveal>
+        <header><em>Sprint</em><h3>&#36;4,800<small>/ project</small></h3><p>One focused engagement for teams that need a sharp, fast outcome.</p></header>
+        <ul><li>Landing page or micro-site</li><li>Art direction &amp; copy polish</li><li>Motion pass &amp; responsive build</li><li>2 revision rounds</li><li>10 day delivery</li></ul>
+        <a class="btn btn--ghost btn--block" href="#contact" data-magnetic><span class="btn__labels"><i>Choose Sprint</i><i>Choose Sprint</i></span><span class="btn__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </article>
+      <article class="plan plan--feature" data-reveal>
+        <span class="plan__tag">Most chosen</span>
+        <header><em>Studio</em><h3>&#36;12,500<small>/ project</small></h3><p>The full build. Strategy, identity, site and system, end to end.</p></header>
+        <ul><li>Positioning &amp; narrative</li><li>Full identity system</li><li>Up to 12 designed sections</li><li>WebGL / motion language</li><li>CMS &amp; analytics setup</li><li>6 weeks, unlimited rounds</li></ul>
+        <a class="btn btn--block" href="#contact" data-magnetic><span class="btn__labels"><i>Choose Studio</i><i>Choose Studio</i></span><span class="btn__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </article>
+      <article class="plan" data-reveal>
+        <header><em>Partner</em><h3>&#36;6,400<small>/ month</small></h3><p>An embedded design team on retainer. Pause or cancel any time.</p></header>
+        <ul><li>Dedicated designer &amp; engineer</li><li>Unlimited requests, one at a time</li><li>Weekly strategy call</li><li>Design system stewardship</li><li>Priority turnaround</li></ul>
+        <a class="btn btn--ghost btn--block" href="#contact" data-magnetic><span class="btn__labels"><i>Choose Partner</i><i>Choose Partner</i></span><span class="btn__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ░░ FAQ ░░ -->
+  <section class="faq" id="faq">
+    <div class="section-head"><span class="eyebrow">FAQs</span><h2 class="display display--md" data-split>Frequently asked questions</h2></div>
+    <div class="faq__list">
+      <details class="qa" data-reveal><summary><span>How long does a full project take?</span><i></i></summary><div class="qa__body"><p>Most studio engagements run six to eight weeks from kickoff to launch. Sprints land in ten working days. We share a dated plan before anything starts.</p></div></details>
+      <details class="qa" data-reveal><summary><span>Do you work with existing brand guidelines?</span><i></i></summary><div class="qa__body"><p>Often. We can extend and modernise a system you already own, or build one from first principles. Either way you receive full source files and documentation.</p></div></details>
+      <details class="qa" data-reveal><summary><span>Which platforms do you build on?</span><i></i></summary><div class="qa__body"><p>Framer, Webflow, Next.js and bespoke front-ends. The choice follows your team&#8217;s ability to maintain it, never our preference.</p></div></details>
+      <details class="qa" data-reveal><summary><span>What happens after launch?</span><i></i></summary><div class="qa__body"><p>Thirty days of complimentary support, then an optional partner retainer for ongoing design, iteration and performance work.</p></div></details>
+      <details class="qa" data-reveal><summary><span>How do we start?</span><i></i></summary><div class="qa__body"><p>Send a short brief through the form below. You get a reply within one business day and a scoped proposal within three.</p></div></details>
+    </div>
+  </section>
+
+  <!-- ░░ CTA ░░ -->
+  <section class="cta" id="contact">
+    <div class="cta__marquee" data-marquee data-speed="0.8"><div class="cta__track"></div></div>
+    <div class="cta__inner">
+      <span class="eyebrow eyebrow--light">Let&#8217;s build</span>
+      <h2 class="display cta__title" data-split>Tell us what you are making</h2>
+      <p class="lede lede--light">One brief. One reply within a business day. No forms that go nowhere.</p>
+      <form class="cta__form" id="ctaForm" novalidate>
+        <label class="field"><span>Name</span><input type="text" name="name" placeholder="Your name" required /></label>
+        <label class="field"><span>Email</span><input type="email" name="email" placeholder="you@company.com" required /></label>
+        <label class="field field--wide"><span>Project</span><input type="text" name="project" placeholder="A sentence about what you need" /></label>
+        <button class="btn btn--light" type="submit" data-magnetic>
+          <span class="btn__labels"><i>Send the brief</i><i>Send the brief</i></span>
+          <span class="btn__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </button>
+        <p class="cta__note" id="ctaNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__top">
+    <h3 class="display display--sm">At Ether we design with purpose, build with precision and ship with pride.</h3>
+    <div class="foot__cols">
+      <div><span class="eyebrow">Navigate</span><a href="#top">Home</a><a href="#services">Services</a><a href="#work">Work</a><a href="#pricing">Pricing</a></div>
+      <div><span class="eyebrow">Social</span><a href="#top">X (Twitter)</a><a href="#top">LinkedIn</a><a href="#top">Dribbble</a><a href="#top">Behance</a></div>
+      <div><span class="eyebrow">Contact</span><a href="#contact">hello@ether.studio</a><a href="#contact">+91 80 4000 1200</a><a href="#contact">Bengaluru, IN</a></div>
+    </div>
+  </div>
+  <div class="foot__word" aria-hidden="true"><span>ETHER</span><sup>&#174;</sup></div>
+  <div class="foot__bar"><p>&#169; 2026 Ether Studio. All rights reserved.</p><p>Designed &amp; built in-house.</p></div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
